@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Layout } from '../components/Layout'
 import { MangaCard } from '../components/MangaCard'
-import { Sidebar } from '../components/SideBar'
+import { SideBar } from '../components/SideBar'
 import data from "../temp.json"
 
 export const Home = () => {
@@ -30,7 +30,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="flex-[20%]  my-10">
-            <Sidebar />
+            <SideBar />
           </div>
         </div>
       </Layout>

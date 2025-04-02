@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import thumbnail from "../assets/thumbnail.jpg";
 import data from "../detail.json";
 import StarRatings from "react-star-ratings";
-import { Sidebar } from "../components/SideBar";
+import { SideBar } from "../components/SideBar";
 
 export const MangaDetails = () => {
   const { id } = useParams();
@@ -118,7 +118,7 @@ export const MangaDetails = () => {
         </div>
 
         <div className="flex-[20%] my-10">
-          <Sidebar />
+          <SideBar />
         </div>
       </div>
     </Layout>

@@ -59,9 +59,17 @@ export const MangaDetails = () => {
                   <span className="text-gray-400 ">{data["artist(s)"]}</span>
                   {"    "}
                 </li>
-                <li className="font-semibold text-md">
+                <li className="flex gap-2  items-center font-semibold text-md">
                   Genre:{"    "}
-                  <span className="text-gray-400 ">{data["genre(s)"]}</span>
+                  <span className="text-gray-400 flex flex-wrap gap-3">
+                    {data["genre(s)"].split(",").map((genre) => {
+                      return (
+                        <span className="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">
+                          {genre}
+                        </span>
+                      );
+                    })}
+                  </span>
                   {"    "}
                 </li>
                 <li className="font-semibold text-md">
@@ -88,10 +96,18 @@ export const MangaDetails = () => {
                 <div>
                   <div key={i}>
                     <div className="flex items-center justify-between">
-                      <a href={chapter.path} target="_blank" className="hover:text-red-500">
-                        <p className="p-4 font-semibold">Chapter {chapter.number}</p>
+                      <a
+                        href={chapter.path}
+                        target="_blank"
+                        className="hover:text-red-500"
+                      >
+                        <p className="p-4 font-semibold">
+                          Chapter {chapter.number}
+                        </p>
                       </a>
-                      <p className="text-gray-300 font-semibold p-4">{chapter.published_on}</p>
+                      <p className="text-gray-300 font-semibold p-4">
+                        {chapter.published_on}
+                      </p>
                     </div>
                   </div>
                   <hr className="text-gray-300" />
